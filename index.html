@@ -650,9 +650,10 @@ section{padding:6rem 2rem;position:relative}
   opacity:0.85;filter:grayscale(0.1);
 }
 .sponsor-logo:hover{opacity:1;transform:translateY(-2px);filter:none}
-.sponsor-logo img{max-height:100%;max-width:240px;width:auto;height:auto;display:block}
+.sponsor-logo img,.sponsor-logo>svg{max-height:100%;max-width:240px;width:auto;height:auto;display:block}
+.sponsor-logo>svg{height:100%}
 .sponsors-block.promotor .sponsor-logo{height:130px}
-.sponsors-block.promotor .sponsor-logo img{max-width:300px}
+.sponsors-block.promotor .sponsor-logo img,.sponsors-block.promotor .sponsor-logo>svg{max-width:300px}
 
 /* =================  CONTACTO  ================= */
 #contacto{
@@ -673,8 +674,11 @@ section{padding:6rem 2rem;position:relative}
 .contact-list a:hover{color:var(--gold-light)}
 .contact-list span.label{
   font-size:0.7rem;letter-spacing:0.25em;color:var(--mute);
-  text-transform:uppercase;display:block !important;margin-bottom:0.2rem;
+  text-transform:uppercase;margin-bottom:0.2rem;
 }
+[data-lang="es"] .contact-list span.label[data-i18n-es],
+[data-lang="en"] .contact-list span.label[data-i18n-en],
+[data-lang="de"] .contact-list span.label[data-i18n-de]{display:block}
 .socials{
   display:flex;gap:1rem;margin-top:2rem;
 }
@@ -1601,7 +1605,33 @@ footer{
       </h4>
       <div class="sponsors-grid">
         <a href="https://teror.es" target="_blank" rel="noopener" class="sponsor-logo">
-          <img src="img/logos/ayuntamiento-teror.svg" alt="Ayuntamiento de Teror">
+          <svg width="240" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 140" role="img" aria-label="Ayuntamiento de Teror">
+  <style>
+    .lbl{font-family:'Inter',system-ui,sans-serif;fill:#fafafa}
+    .sm{font-size:11px;font-weight:400;letter-spacing:0.5px}
+    .lg{font-size:42px;font-weight:700;letter-spacing:-1px}
+  </style>
+  <!-- Shield + crown emblem -->
+  <g transform="translate(8 8)">
+    <!-- Crown of dots -->
+    <g fill="#fafafa">
+      <path d="M 20 4 q 6 -6 12 0 v 6 h -12 z"/>
+      <circle cx="38" cy="6" r="3"/>
+      <circle cx="48" cy="4" r="3.5"/>
+      <circle cx="58" cy="6" r="3"/>
+      <path d="M 64 4 q 6 -6 12 0 v 6 h -12 z"/>
+    </g>
+    <rect x="24" y="12" width="48" height="6" fill="#fafafa"/>
+    <!-- Shield with T -->
+    <path d="M 22 22 h 52 v 50 q 0 18 -26 26 q -26 -8 -26 -26 z" fill="#fafafa"/>
+    <!-- T cutout -->
+    <rect x="34" y="34" width="28" height="9" fill="#0c0418"/>
+    <rect x="44" y="34" width="8" height="46" fill="#0c0418"/>
+  </g>
+  <!-- Text -->
+  <text x="110" y="56" class="lbl sm">Ayuntamiento de</text>
+  <text x="110" y="100" class="lbl lg">Teror</text>
+</svg>
         </a>
       </div>
     </div>
@@ -1614,16 +1644,118 @@ footer{
       </h4>
       <div class="sponsors-grid">
         <a href="https://www.grancanaria.com" target="_blank" rel="noopener" class="sponsor-logo">
-          <img src="img/logos/cabildo-gran-canaria.svg" alt="Cabildo de Gran Canaria">
+          <svg width="240" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 140" role="img" aria-label="Cabildo de Gran Canaria">
+  <style>
+    .lbl{font-family:'Inter',system-ui,sans-serif;fill:#ffd400;font-weight:700}
+    .nm{font-size:18px;letter-spacing:-0.3px}
+  </style>
+  <!-- Coat of arms emblem -->
+  <g transform="translate(28 12)">
+    <!-- Cross on top -->
+    <rect x="38" y="0" width="4" height="10" fill="#ffd400"/>
+    <rect x="34" y="3" width="12" height="4" fill="#ffd400"/>
+    <!-- Crown -->
+    <path d="M 16 14 q 8 -6 16 0 q 8 -6 16 0 q 8 -6 16 0 v 10 h -48 z" fill="#ffd400"/>
+    <rect x="14" y="22" width="52" height="6" fill="#ffd400"/>
+    <!-- Shield -->
+    <path d="M 12 30 h 56 v 48 q 0 16 -28 22 q -28 -6 -28 -22 z" fill="#ffd400"/>
+    <!-- Inner quadrants -->
+    <g fill="#003594">
+      <!-- castle top-left -->
+      <rect x="22" y="40" width="14" height="12"/>
+      <rect x="24" y="36" width="3" height="6"/>
+      <rect x="29.5" y="34" width="3" height="8"/>
+      <rect x="35" y="36" width="3" height="6"/>
+      <!-- lion top-right -->
+      <path d="M 44 40 q 4 -2 6 0 l 1 6 q -2 3 -7 2 z"/>
+      <circle cx="48" cy="42" r="2.5"/>
+      <!-- palm with two animals bottom -->
+      <rect x="38" y="62" width="2.5" height="14"/>
+      <path d="M 34 64 q 6 -8 12 0 q -2 -2 -6 -2 q -4 0 -6 2" fill="#ffd400"/>
+      <circle cx="33" cy="74" r="3"/>
+      <circle cx="46" cy="74" r="3"/>
+    </g>
+    <!-- Saltires (X marks) -->
+    <g stroke="#003594" stroke-width="2" fill="none">
+      <path d="M 17 38 l 4 4 M 21 38 l -4 4"/>
+      <path d="M 59 38 l 4 4 M 63 38 l -4 4"/>
+      <path d="M 17 58 l 4 4 M 21 58 l -4 4"/>
+      <path d="M 59 58 l 4 4 M 63 58 l -4 4"/>
+      <path d="M 38 92 l 4 4 M 42 92 l -4 4"/>
+    </g>
+  </g>
+  <!-- Wordmark -->
+  <text x="118" y="60" class="lbl nm">Cabildo de</text>
+  <text x="118" y="84" class="lbl nm">Gran Canaria</text>
+</svg>
         </a>
         <a href="https://www.holaislascanarias.com" target="_blank" rel="noopener" class="sponsor-logo">
-          <img src="img/logos/islas-canarias.svg" alt="Islas Canarias · Latitud de Vida">
+          <svg width="240" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 140" role="img" aria-label="Islas Canarias — Latitud de vida">
+  <style>
+    .ic{font-family:'Inter',system-ui,sans-serif;fill:#1e9bd6;font-weight:700;letter-spacing:-0.5px}
+    .nm{font-size:30px}
+    .tg{font-family:'Inter',system-ui,sans-serif;fill:#ff8a3a;font-weight:600;font-size:12px;letter-spacing:3px}
+  </style>
+  <text x="14" y="48" class="ic nm">Islas</text>
+  <text x="14" y="80" class="ic nm">Canarias</text>
+  <!-- 7-petal sunburst -->
+  <g transform="translate(208 50)">
+    <g fill="#ff8a3a">
+      <ellipse cx="0" cy="-22" rx="6" ry="11"/>
+      <ellipse cx="20" cy="-12" rx="10" ry="6" transform="rotate(50)"/>
+      <ellipse cx="22" cy="14" rx="6" ry="11" transform="rotate(110)"/>
+      <ellipse cx="0" cy="22" rx="6" ry="11"/>
+      <ellipse cx="-22" cy="14" rx="6" ry="11" transform="rotate(-110)"/>
+      <ellipse cx="-20" cy="-12" rx="10" ry="6" transform="rotate(-50)"/>
+    </g>
+    <g fill="#e74c3c">
+      <ellipse cx="0" cy="-22" rx="3" ry="6"/>
+      <ellipse cx="0" cy="22" rx="3" ry="6"/>
+    </g>
+    <circle r="5" fill="#1e9bd6"/>
+  </g>
+  <text x="14" y="106" class="tg">LATITUD DE VIDA</text>
+</svg>
         </a>
         <a href="https://auditorio.teror.es" target="_blank" rel="noopener" class="sponsor-logo">
-          <img src="img/logos/auditorio-teror.svg" alt="Auditorio de Teror">
+          <svg width="240" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 140" role="img" aria-label="Auditorio de Teror">
+  <style>
+    .lbl{font-family:'Inter',system-ui,sans-serif;fill:#fafafa;font-weight:300;letter-spacing:6px;font-size:18px}
+  </style>
+  <text x="140" y="55" text-anchor="middle" class="lbl">AUDITORIO DE TEROR</text>
+  <!-- Red bars (piano keys) -->
+  <g fill="#8b1a25">
+    <rect x="78" y="75" width="10" height="48"/>
+    <rect x="92" y="75" width="10" height="48"/>
+    <rect x="106" y="75" width="10" height="48"/>
+    <rect x="120" y="75" width="10" height="48"/>
+    <rect x="134" y="75" width="10" height="48"/>
+    <rect x="148" y="75" width="10" height="48"/>
+    <rect x="162" y="75" width="10" height="48"/>
+    <rect x="176" y="75" width="10" height="48"/>
+    <rect x="190" y="75" width="10" height="48"/>
+    <rect x="204" y="75" width="10" height="48"/>
+  </g>
+</svg>
         </a>
         <a href="https://www.aguasdeteror.com" target="_blank" rel="noopener" class="sponsor-logo">
-          <img src="img/logos/aguas-de-teror.svg" alt="Aguas de Teror">
+          <svg width="240" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 140" role="img" aria-label="Aguas de Teror">
+  <style>
+    .lbl{font-family:'Inter',system-ui,sans-serif;fill:#0a5d3a;font-weight:800;font-size:32px;letter-spacing:-0.5px}
+  </style>
+  <!-- Pine tree -->
+  <g fill="#0a5d3a" transform="translate(20 28)">
+    <ellipse cx="32" cy="14" rx="16" ry="11"/>
+    <ellipse cx="22" cy="28" rx="14" ry="10"/>
+    <ellipse cx="42" cy="28" rx="14" ry="10"/>
+    <ellipse cx="32" cy="34" rx="20" ry="13"/>
+    <ellipse cx="22" cy="48" rx="14" ry="10"/>
+    <ellipse cx="42" cy="48" rx="14" ry="10"/>
+    <ellipse cx="32" cy="56" rx="18" ry="12"/>
+    <rect x="29" y="62" width="6" height="16"/>
+  </g>
+  <text x="100" y="84" class="lbl">Aguas de Teror</text>
+</svg>
         </a>
       </div>
     </div>
