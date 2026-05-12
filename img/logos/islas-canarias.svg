@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 140" role="img" aria-label="Islas Canarias — Latitud de vida">
+  <style>
+    .ic{font-family:'Inter',system-ui,sans-serif;fill:#1e9bd6;font-weight:700;letter-spacing:-0.5px}
+    .nm{font-size:30px}
+    .tg{font-family:'Inter',system-ui,sans-serif;fill:#ff8a3a;font-weight:600;font-size:12px;letter-spacing:3px}
+  </style>
+  <text x="14" y="48" class="ic nm">Islas</text>
+  <text x="14" y="80" class="ic nm">Canarias</text>
+  <!-- 7-petal sunburst -->
+  <g transform="translate(208 50)">
+    <g fill="#ff8a3a">
+      <ellipse cx="0" cy="-22" rx="6" ry="11"/>
+      <ellipse cx="20" cy="-12" rx="10" ry="6" transform="rotate(50)"/>
+      <ellipse cx="22" cy="14" rx="6" ry="11" transform="rotate(110)"/>
+      <ellipse cx="0" cy="22" rx="6" ry="11"/>
+      <ellipse cx="-22" cy="14" rx="6" ry="11" transform="rotate(-110)"/>
+      <ellipse cx="-20" cy="-12" rx="10" ry="6" transform="rotate(-50)"/>
+    </g>
+    <g fill="#e74c3c">
+      <ellipse cx="0" cy="-22" rx="3" ry="6"/>
+      <ellipse cx="0" cy="22" rx="3" ry="6"/>
+    </g>
+    <circle r="5" fill="#1e9bd6"/>
+  </g>
+  <text x="14" y="106" class="tg">LATITUD DE VIDA</text>
+</svg>

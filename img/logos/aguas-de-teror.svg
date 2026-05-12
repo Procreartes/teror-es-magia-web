@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 140" role="img" aria-label="Aguas de Teror">
+  <style>
+    .lbl{font-family:'Inter',system-ui,sans-serif;fill:#0a5d3a;font-weight:800;font-size:32px;letter-spacing:-0.5px}
+  </style>
+  <!-- Pine tree -->
+  <g fill="#0a5d3a" transform="translate(20 28)">
+    <ellipse cx="32" cy="14" rx="16" ry="11"/>
+    <ellipse cx="22" cy="28" rx="14" ry="10"/>
+    <ellipse cx="42" cy="28" rx="14" ry="10"/>
+    <ellipse cx="32" cy="34" rx="20" ry="13"/>
+    <ellipse cx="22" cy="48" rx="14" ry="10"/>
+    <ellipse cx="42" cy="48" rx="14" ry="10"/>
+    <ellipse cx="32" cy="56" rx="18" ry="12"/>
+    <rect x="29" y="62" width="6" height="16"/>
+  </g>
+  <text x="100" y="84" class="lbl">Aguas de Teror</text>
+</svg>

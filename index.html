@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teror es Magia · X Festival de Magia · 9-11 octubre 2026</title>
+<meta name="description" content="X Festival Teror es Magia. Del 9 al 11 de octubre de 2026, la Villa de Teror (Gran Canaria) se convierte en la capital de la magia y el ilusionismo.">
+<meta property="og:title" content="Teror es Magia · X Festival de Magia">
+<meta property="og:description" content="Del 9 al 11 de octubre de 2026, la Villa de Teror se transforma en el epicentro de la magia en Canarias.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* =================  RESET & BASE  ================= */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0c0418;
+  --bg-2:#150a25;
+  --bg-3:#1e1135;
+  --surface:#1a0e2e;
+  --gold:#ec4899;             /* magenta principal (kept var name) */
+  --gold-light:#f472b6;       /* magenta claro */
+  --gold-dim:#a21caf;         /* magenta profundo */
+  --cream:#ede9fe;
+  --white:#fafafa;
+  --mute:#9d8bbb;
+  --red:#d946ef;              /* electric */
+  --line:rgba(236,72,153,0.16);
+  --shadow-gold:0 10px 40px rgba(236,72,153,0.22);
+  --grad-gold:linear-gradient(135deg,#ec4899 0%,#a78bfa 50%,#7c3aed 100%);
+  --grad-dark:linear-gradient(180deg,rgba(12,4,24,0) 0%,rgba(12,4,24,0.88) 70%,#0c0418 100%);
+  --font-serif:'Space Grotesk',system-ui,sans-serif;
+  --font-display:'Space Grotesk',system-ui,sans-serif;
+  --font-italic:'Instrument Serif',serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --tr:0.4s cubic-bezier(.2,.7,.2,1);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font-body);
+  background:var(--bg);
+  color:var(--white);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none;transition:color var(--tr)}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+/* =================  PAGE LOADER  ================= */
+.loader{
+  position:fixed;inset:0;background:var(--bg);z-index:9999;
+  display:flex;align-items:center;justify-content:center;
+  animation:loaderOut 0.6s ease 2.2s forwards;
+}
+.loader-logo{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,4vw,2.5rem);
+  letter-spacing:0.4em;color:var(--gold);
+  display:flex;gap:0.4em;
+}
+.loader-logo span{
+  opacity:0;animation:letterIn 0.4s ease forwards;
+}
+.loader-logo span:nth-child(1){animation-delay:0.05s}
+.loader-logo span:nth-child(2){animation-delay:0.15s}
+.loader-logo span:nth-child(3){animation-delay:0.25s}
+.loader-logo span:nth-child(4){animation-delay:0.35s}
+.loader-logo span:nth-child(5){animation-delay:0.45s}
+.loader-logo span:nth-child(6){animation-delay:0.55s}
+.loader-logo span:nth-child(7){animation-delay:0.65s}
+.loader-logo span:nth-child(8){animation-delay:0.75s}
+.loader-logo span:nth-child(9){animation-delay:0.85s}
+.loader-logo span:nth-child(10){animation-delay:0.95s}
+.loader-logo span:nth-child(11){animation-delay:1.05s}
+.loader-logo span:nth-child(12){animation-delay:1.15s}
+.loader-logo span:nth-child(13){animation-delay:1.25s}
+@keyframes letterIn{
+  0%{opacity:0;transform:translateY(20px) rotateX(-90deg)}
+  100%{opacity:1;transform:translateY(0) rotateX(0)}
+}
+@keyframes loaderOut{
+  0%{opacity:1;visibility:visible}
+  100%{opacity:0;visibility:hidden;pointer-events:none}
+}
+.loader.hidden{display:none}
+
+/* =================  NAVBAR  ================= */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.4rem 2.5rem;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background var(--tr),padding var(--tr),box-shadow var(--tr);
+  background:linear-gradient(180deg,rgba(10,8,7,0.85) 0%,rgba(10,8,7,0) 100%);
+  backdrop-filter:blur(0px);
+}
+.nav.scrolled{
+  background:rgba(10,8,7,0.92);
+  backdrop-filter:blur(12px);
+  padding:0.9rem 2.5rem;
+  box-shadow:0 1px 0 var(--line),0 8px 30px rgba(0,0,0,0.5);
+}
+.nav-brand{
+  font-family:var(--font-serif);
+  letter-spacing:0.25em;
+  font-size:0.95rem;
+  font-weight:600;
+  color:var(--gold);
+  display:flex;align-items:center;gap:0.6rem;
+}
+.nav-brand i{color:var(--gold-light);font-size:1.1rem}
+.nav-links{
+  display:flex;gap:2rem;align-items:center;list-style:none;
+}
+.nav-links a{
+  font-size:0.78rem;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--cream);
+  position:relative;padding:0.5rem 0;
+}
+.nav-links a:hover{color:var(--gold-light)}
+.nav-links a::after{
+  content:'';position:absolute;left:0;bottom:-2px;
+  width:0;height:1px;background:var(--gold);transition:width var(--tr);
+}
+.nav-links a:hover::after{width:100%}
+.nav-cta{
+  background:var(--grad-gold);
+  color:#0c0418 !important;
+  padding:0.7rem 1.4rem !important;
+  border-radius:2px;
+  font-weight:600;
+  letter-spacing:0.18em !important;
+  transition:transform var(--tr),box-shadow var(--tr);
+}
+.nav-cta:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-gold);
+}
+.nav-cta::after{display:none !important}
+.lang-switch{
+  display:flex;gap:0.4rem;align-items:center;
+  padding-left:1.2rem;border-left:1px solid var(--line);
+}
+.lang-btn{
+  font-size:0.72rem;letter-spacing:0.2em;font-weight:600;
+  padding:0.35rem 0.55rem;
+  color:var(--mute);transition:color var(--tr);
+  border-radius:2px;
+}
+.lang-btn.active{color:var(--gold);background:rgba(236,72,153,0.08)}
+.lang-btn:hover{color:var(--gold-light)}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:0.3rem;z-index:101}
+.hamburger span{width:24px;height:1.5px;background:var(--cream);transition:transform var(--tr),opacity var(--tr)}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media (max-width:980px){
+  .nav{padding:1rem 1.4rem}
+  .nav.scrolled{padding:0.8rem 1.4rem}
+  .hamburger{display:flex}
+  .nav-links{
+    position:fixed;top:0;right:-100%;width:80%;max-width:340px;height:100vh;
+    background:var(--bg-2);flex-direction:column;justify-content:center;gap:2rem;
+    transition:right var(--tr);padding:2rem;border-left:1px solid var(--line);
+  }
+  .nav-links.open{right:0}
+  .nav-links a{font-size:0.95rem}
+  .lang-switch{padding-left:0;border-left:0;border-top:1px solid var(--line);padding-top:1.5rem;margin-top:1rem}
+}
+
+/* =================  HERO  ================= */
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:6rem 1.5rem 3rem;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse at 20% 30%,rgba(236,72,153,0.18) 0%,transparent 50%),
+    radial-gradient(ellipse at 80% 70%,rgba(167,139,250,0.12) 0%,transparent 50%),
+    radial-gradient(ellipse at 50% 100%,rgba(236,72,153,0.08) 0%,transparent 70%),
+    linear-gradient(180deg,#0c0418 0%,#150a25 60%,#0c0418 100%);
+}
+.hero::after{
+  content:'';position:absolute;inset:0;z-index:0;opacity:0.6;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%,rgba(244,114,182,0.8),transparent),
+    radial-gradient(1px 1px at 60% 70%,rgba(244,114,182,0.6),transparent),
+    radial-gradient(1.5px 1.5px at 80% 20%,rgba(244,114,182,0.7),transparent),
+    radial-gradient(1px 1px at 35% 80%,rgba(244,114,182,0.5),transparent),
+    radial-gradient(2px 2px at 70% 50%,rgba(244,114,182,0.6),transparent),
+    radial-gradient(1px 1px at 90% 85%,rgba(244,114,182,0.5),transparent),
+    radial-gradient(1.5px 1.5px at 15% 60%,rgba(244,114,182,0.6),transparent),
+    radial-gradient(1px 1px at 45% 15%,rgba(244,114,182,0.5),transparent);
+  background-size:600px 600px;
+  animation:twinkle 8s ease-in-out infinite;
+}
+@keyframes twinkle{
+  0%,100%{opacity:0.4}
+  50%{opacity:0.8}
+}
+.hero-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto}
+.hero-edition{
+  font-family:var(--font-serif);font-weight:500;
+  font-size:0.78rem;letter-spacing:0.55em;
+  color:var(--gold);margin-bottom:2.5rem;
+  display:inline-flex;align-items:center;gap:1.2rem;
+  text-transform:uppercase;
+}
+.hero-edition::before,.hero-edition::after{
+  content:'';width:32px;height:1px;background:var(--gold);opacity:0.6;
+}
+.hero-title{
+  font-family:var(--font-display);
+  font-size:clamp(3.5rem,11vw,9.5rem);
+  font-weight:300;line-height:0.95;
+  color:var(--white);
+  margin-bottom:2rem;
+  letter-spacing:-0.04em;
+}
+.hero-title .gold{
+  font-family:var(--font-italic);
+  background:var(--grad-gold);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-style:italic;
+  font-weight:400;
+  letter-spacing:-0.02em;
+}
+.hero-sub{
+  font-family:var(--font-body);
+  font-size:clamp(0.85rem,1.4vw,1.05rem);
+  letter-spacing:0.05em;font-weight:300;
+  color:var(--cream);
+  margin-bottom:3rem;
+  opacity:0.9;
+}
+.hero-dates{
+  font-family:var(--font-display);
+  font-size:clamp(1.4rem,3.5vw,2.4rem);
+  font-weight:400;
+  color:var(--gold-light);
+  margin-bottom:0.6rem;letter-spacing:0.08em;
+}
+.hero-place{
+  font-size:0.8rem;letter-spacing:0.3em;
+  color:var(--mute);text-transform:uppercase;
+  margin-bottom:3rem;
+}
+.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  padding:1rem 2rem;font-size:0.78rem;
+  letter-spacing:0.25em;text-transform:uppercase;font-weight:600;
+  transition:all var(--tr);border-radius:2px;
+  cursor:pointer;
+}
+.btn-primary{
+  background:var(--grad-gold);color:#0c0418;
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-gold)}
+.btn-ghost{
+  background:transparent;color:var(--cream);
+  border:1px solid var(--gold);
+}
+.btn-ghost:hover{background:rgba(236,72,153,0.1);color:var(--gold-light)}
+.btn-large{padding:1.2rem 2.5rem;font-size:0.85rem}
+
+.hero-scroll{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  z-index:2;font-size:0.7rem;letter-spacing:0.3em;
+  color:var(--gold);text-transform:uppercase;
+  display:flex;flex-direction:column;align-items:center;gap:0.8rem;
+}
+.hero-scroll i{font-size:1rem;animation:bounce 2s infinite}
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(8px)}
+}
+
+/* =================  SECTIONS  ================= */
+section{padding:6rem 2rem;position:relative}
+.container{max-width:1200px;margin:0 auto}
+.section-label{
+  font-family:var(--font-serif);font-weight:500;
+  font-size:0.72rem;letter-spacing:0.35em;
+  color:var(--gold);text-transform:uppercase;
+  margin-bottom:1.6rem;
+  display:flex;align-items:center;gap:0.8rem;
+}
+.section-label::before{
+  content:'';width:8px;height:8px;border-radius:50%;background:var(--gold);
+}
+.section-title{
+  font-family:var(--font-display);
+  font-size:clamp(2.2rem,5vw,4rem);
+  font-weight:300;line-height:1.05;
+  color:var(--white);margin-bottom:1.8rem;
+  letter-spacing:-0.03em;
+}
+.section-title em{
+  font-style:italic;color:var(--gold-light);
+  font-family:var(--font-italic);font-weight:400;
+}
+.section-intro{
+  font-size:1.05rem;color:var(--cream);
+  max-width:680px;margin-bottom:3.5rem;
+  line-height:1.7;
+}
+
+/* =================  ABOUT  ================= */
+#sobre{background:linear-gradient(180deg,#0c0418 0%,#150a25 100%)}
+.about-grid{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;
+}
+.about-text p{margin-bottom:1.2rem;color:var(--cream);font-size:1.02rem;line-height:1.8}
+.about-text .lead::first-letter{
+  font-family:var(--font-italic);font-size:4.5rem;font-weight:400;
+  font-style:italic;
+  float:left;line-height:0.9;padding:0.4rem 0.7rem 0 0;color:var(--gold);
+}
+.about-visual{
+  position:relative;aspect-ratio:4/5;
+  background:
+    radial-gradient(circle at 30% 30%,rgba(236,72,153,0.3) 0%,transparent 50%),
+    linear-gradient(135deg,#1e1135 0%,#0c0418 100%);
+  border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.about-visual::before{
+  content:'';position:absolute;inset:20px;border:1px solid var(--line);
+  pointer-events:none;
+}
+.about-visual i{font-size:9rem;color:var(--gold);opacity:0.45}
+.about-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;
+  margin-top:4rem;padding-top:3rem;border-top:1px solid var(--line);
+}
+.stat{text-align:center}
+.stat-num{
+  font-family:var(--font-display);
+  font-size:clamp(2.5rem,5vw,3.8rem);font-weight:500;
+  color:var(--gold);line-height:1;
+}
+.stat-label{
+  font-size:0.72rem;letter-spacing:0.3em;
+  color:var(--mute);text-transform:uppercase;margin-top:0.6rem;
+}
+
+@media (max-width:780px){
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .about-stats{grid-template-columns:repeat(3,1fr);gap:1rem}
+}
+
+/* =================  PROGRAMA / ARTISTAS  ================= */
+#programa{background:var(--bg)}
+.artists-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;margin-top:3rem;
+}
+.artist-card{
+  position:relative;background:var(--bg-3);
+  border:1px solid var(--line);
+  overflow:hidden;transition:transform var(--tr),border-color var(--tr);
+}
+.artist-card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.artist-img{
+  aspect-ratio:3/4;
+  background:
+    radial-gradient(circle at 50% 30%,rgba(236,72,153,0.25) 0%,transparent 60%),
+    linear-gradient(180deg,#1e1135 0%,#0c0418 100%);
+  background-size:cover;background-position:center;
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.artist-img.has-photo{
+  background-blend-mode:luminosity;
+}
+.artist-img i{font-size:5rem;color:var(--gold);opacity:0.35}
+.artist-img.has-photo i{display:none}
+.artist-img.tba::after{
+  content:'PRÓXIMAMENTE';
+  position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);
+  font-family:var(--font-serif);font-size:0.7rem;letter-spacing:0.35em;
+  color:var(--gold);padding:0.4rem 1rem;
+  border:1px solid var(--gold);background:rgba(12,4,24,0.7);
+}
+[data-lang="en"] .artist-img.tba::after{content:'COMING SOON'}
+[data-lang="de"] .artist-img.tba::after{content:'DEMNÄCHST'}
+.artist-info{padding:1.5rem}
+.artist-country{
+  font-size:0.7rem;letter-spacing:0.3em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:0.5rem;
+}
+.artist-name{
+  font-family:var(--font-display);font-size:1.6rem;font-weight:500;
+  color:var(--white);margin-bottom:0.5rem;
+}
+.artist-show{
+  font-family:var(--font-serif);font-style:italic;font-size:0.95rem;
+  color:var(--gold-light);margin-bottom:0.8rem;
+}
+.artist-desc{
+  font-size:0.92rem;color:var(--mute);line-height:1.6;
+}
+
+.lineup-history{
+  margin:3rem 0 4rem;padding:2rem 0;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.lineup-label{
+  font-family:var(--font-serif);font-size:0.7rem;letter-spacing:0.35em;
+  color:var(--gold);text-transform:uppercase;margin-bottom:1.2rem;font-weight:500;
+  text-align:center;
+}
+.lineup-names{
+  font-family:var(--font-italic);font-style:italic;
+  font-size:clamp(1.05rem,1.8vw,1.3rem);
+  color:var(--cream);line-height:1.6;letter-spacing:0.01em;
+  max-width:1000px;margin:0 auto 2.5rem;text-align:center;
+}
+.past-artists{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:0.8rem;max-width:1100px;margin:0 auto;
+}
+.past-artist{
+  position:relative;aspect-ratio:1/1;overflow:hidden;
+  background-color:#1e1135;background-size:cover;background-position:center top;
+}
+.past-artist::before{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:radial-gradient(circle at 50% 30%,rgba(236,72,153,0.18) 0%,transparent 65%);
+}
+.past-artist::after{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(12,4,24,0) 35%,rgba(12,4,24,0.95) 100%);
+}
+.past-artist .name{
+  position:absolute;left:0;right:0;bottom:0;padding:0.7rem 0.9rem;
+  font-family:var(--font-serif);font-weight:600;font-size:0.78rem;
+  color:var(--white);z-index:2;letter-spacing:0.02em;line-height:1.2;
+}
+.program-timeline{
+  margin-top:5rem;padding-top:4rem;border-top:1px solid var(--line);
+}
+.timeline-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
+.day-block{
+  background:var(--bg-3);border:1px solid var(--line);
+  padding:2rem;position:relative;
+}
+.day-block::before{
+  content:'';position:absolute;top:0;left:0;width:60px;height:1px;background:var(--gold);
+}
+.day-num{
+  font-family:var(--font-display);font-size:3rem;font-weight:500;
+  color:var(--gold);line-height:1;
+}
+.day-month{
+  font-size:0.7rem;letter-spacing:0.3em;color:var(--mute);
+  text-transform:uppercase;margin-bottom:1.8rem;
+}
+.day-event{
+  padding:0.9rem 0;border-bottom:1px dashed var(--line);
+}
+.day-event:last-child{border-bottom:none}
+.event-time{
+  font-family:var(--font-serif);font-size:0.78rem;letter-spacing:0.2em;
+  color:var(--gold);font-weight:600;
+}
+.event-title{
+  font-family:var(--font-display);font-size:1.15rem;font-weight:500;
+  color:var(--white);margin-top:0.2rem;
+}
+.event-place{font-size:0.82rem;color:var(--mute);margin-top:0.15rem}
+
+@media (max-width:780px){
+  .timeline-grid{grid-template-columns:1fr}
+}
+
+/* =================  EDICIONES ANTERIORES  ================= */
+#ediciones{background:var(--bg-2)}
+.editions-track{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.5rem;margin-top:3rem;
+}
+.edition-card{
+  position:relative;aspect-ratio:3/4;overflow:hidden;
+  background-color:#1e1135;
+  background-size:cover;background-position:center;
+  cursor:pointer;
+  transition:transform var(--tr);
+}
+.edition-card:hover{transform:translateY(-4px)}
+.edition-card::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(circle at center,rgba(236,72,153,0.18) 0%,transparent 65%);
+}
+.edition-card::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(12,4,24,0.1) 0%,rgba(12,4,24,0.5) 50%,rgba(12,4,24,0.95) 100%);
+}
+.edition-meta{
+  position:absolute;left:1.4rem;right:1.4rem;bottom:1.4rem;z-index:2;
+}
+.edition-roman{
+  font-family:var(--font-serif);font-size:2.2rem;font-weight:600;
+  color:var(--gold);line-height:1;
+}
+.edition-year{
+  font-size:0.7rem;letter-spacing:0.3em;color:var(--cream);
+  margin-top:0.3rem;text-transform:uppercase;
+}
+.edition-title{
+  font-family:var(--font-display);font-style:italic;
+  font-size:1.1rem;color:var(--white);margin-top:0.8rem;
+}
+.edition-icon{
+  position:absolute;top:1.4rem;right:1.4rem;z-index:2;
+  font-size:1.6rem;color:var(--gold);opacity:0.6;
+}
+
+/* =================  SOSTENIBILIDAD  ================= */
+#sostenibilidad{
+  background:
+    linear-gradient(180deg,#0c0418 0%,#150a25 50%,#0c0418 100%);
+  position:relative;
+}
+.sus-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:2rem;margin-top:3rem;
+}
+.sus-card{
+  background:rgba(28,24,20,0.5);border:1px solid var(--line);
+  padding:2.2rem;text-align:left;
+  transition:transform var(--tr),border-color var(--tr);
+}
+.sus-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.sus-icon{
+  width:54px;height:54px;border-radius:50%;
+  background:rgba(236,72,153,0.1);border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;color:var(--gold);margin-bottom:1.4rem;
+}
+.sus-card h4{
+  font-family:var(--font-display);font-size:1.4rem;font-weight:500;
+  color:var(--white);margin-bottom:0.7rem;
+}
+.sus-card p{
+  font-size:0.92rem;color:var(--mute);line-height:1.7;
+}
+
+/* =================  ENTRADAS  ================= */
+#entradas{
+  background:
+    radial-gradient(ellipse at center,rgba(236,72,153,0.08) 0%,transparent 70%),
+    #0c0418;
+  text-align:center;
+}
+.tickets-wrap{max-width:780px;margin:0 auto;text-align:center}
+.tickets-wrap .section-label{justify-content:center}
+.tickets-wrap .section-label::before,
+.tickets-wrap .section-label::after{
+  content:'';width:40px;height:1px;background:var(--gold);
+}
+.tickets-price{
+  font-family:var(--font-display);
+  font-size:clamp(3rem,7vw,5rem);font-weight:500;
+  color:var(--gold);margin:2rem 0 0.5rem;
+}
+.tickets-price small{
+  font-size:0.4em;color:var(--cream);font-style:italic;
+}
+.tickets-note{
+  font-size:0.9rem;color:var(--mute);margin-bottom:2.5rem;letter-spacing:0.05em;
+}
+.tickets-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+.tickets-feria{
+  margin-top:4rem;padding:2.5rem;
+  border:1px dashed var(--gold);background:rgba(236,72,153,0.04);
+}
+.tickets-feria h4{
+  font-family:var(--font-display);font-size:1.6rem;font-weight:500;
+  color:var(--gold-light);margin-bottom:0.6rem;
+}
+.tickets-feria p{color:var(--cream);font-size:0.95rem;line-height:1.7}
+.tickets-feria .free-tag{
+  display:inline-block;margin-top:1rem;
+  font-family:var(--font-serif);font-size:0.7rem;letter-spacing:0.35em;
+  color:var(--gold);padding:0.4rem 1rem;border:1px solid var(--gold);
+}
+
+/* =================  UBICACION  ================= */
+#ubicacion{background:var(--bg-2)}
+.location-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;
+}
+.location-info h3{
+  font-family:var(--font-display);font-size:2rem;font-weight:500;
+  color:var(--gold-light);margin-bottom:1.2rem;
+}
+.location-info p{
+  color:var(--cream);font-size:1rem;line-height:1.8;margin-bottom:1rem;
+}
+.location-info ul{list-style:none;margin-top:1.5rem}
+.location-info ul li{
+  padding:0.7rem 0;border-bottom:1px solid var(--line);
+  display:flex;gap:1rem;align-items:flex-start;
+}
+.location-info ul li i{color:var(--gold);margin-top:0.3rem}
+.map-wrap{
+  aspect-ratio:4/3;border:1px solid var(--line);
+  background:#0c0418;position:relative;overflow:hidden;
+}
+.map-wrap iframe{width:100%;height:100%;border:none;filter:grayscale(0.3) brightness(0.85) contrast(1.1)}
+
+@media (max-width:780px){
+  .location-grid{grid-template-columns:1fr;gap:2.5rem}
+}
+
+/* =================  PATROCINADORES  ================= */
+#patrocinadores{
+  background:var(--bg);text-align:center;padding:5rem 2rem;
+}
+.sponsors-block{margin-top:3rem}
+.sponsors-block h4{
+  font-family:var(--font-serif);font-size:0.78rem;letter-spacing:0.4em;
+  color:var(--mute);text-transform:uppercase;margin-bottom:2rem;
+}
+.sponsors-grid{
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+  gap:3rem;margin-bottom:3.5rem;
+}
+.sponsor-logo{
+  height:96px;padding:1.4rem 2rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity var(--tr),transform var(--tr);
+  opacity:0.85;filter:grayscale(0.1);
+}
+.sponsor-logo:hover{opacity:1;transform:translateY(-2px);filter:none}
+.sponsor-logo img{max-height:100%;max-width:240px;width:auto;height:auto;display:block}
+.sponsors-block.promotor .sponsor-logo{height:130px}
+.sponsors-block.promotor .sponsor-logo img{max-width:300px}
+
+/* =================  CONTACTO  ================= */
+#contacto{
+  background:linear-gradient(180deg,#0c0418 0%,#150a25 100%);
+}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;
+}
+.contact-info p{color:var(--cream);font-size:1rem;line-height:1.8;margin-bottom:2rem}
+.contact-list{list-style:none}
+.contact-list li{
+  display:flex;gap:1.2rem;align-items:flex-start;
+  padding:1rem 0;border-bottom:1px solid var(--line);
+}
+.contact-list li i{
+  color:var(--gold);font-size:1.1rem;margin-top:0.2rem;width:24px;
+}
+.contact-list a:hover{color:var(--gold-light)}
+.contact-list span.label{
+  font-size:0.7rem;letter-spacing:0.25em;color:var(--mute);
+  text-transform:uppercase;display:block !important;margin-bottom:0.2rem;
+}
+.socials{
+  display:flex;gap:1rem;margin-top:2rem;
+}
+.socials a{
+  width:46px;height:46px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);color:var(--cream);
+  transition:all var(--tr);
+}
+.socials a:hover{
+  background:var(--gold);color:#0c0418;border-color:var(--gold);transform:translateY(-3px);
+}
+.newsletter{
+  background:rgba(28,24,20,0.5);border:1px solid var(--line);
+  padding:2.5rem;
+}
+.newsletter h3{
+  font-family:var(--font-display);font-size:1.8rem;font-weight:500;
+  color:var(--gold-light);margin-bottom:0.6rem;
+}
+.newsletter p{color:var(--cream);font-size:0.92rem;margin-bottom:1.5rem;line-height:1.6}
+.newsletter form{display:flex;gap:0.6rem;flex-wrap:wrap}
+.newsletter input{
+  flex:1;min-width:180px;padding:0.9rem 1rem;
+  background:#0c0418;border:1px solid var(--line);color:var(--white);
+  font-family:var(--font-body);font-size:0.92rem;
+}
+.newsletter input:focus{outline:none;border-color:var(--gold)}
+.newsletter button{
+  background:var(--grad-gold);color:#0c0418;
+  padding:0.9rem 1.4rem;font-size:0.78rem;letter-spacing:0.2em;
+  text-transform:uppercase;font-weight:600;border-radius:2px;
+  transition:transform var(--tr);
+}
+.newsletter button:hover{transform:translateY(-2px)}
+
+@media (max-width:780px){
+  .contact-grid{grid-template-columns:1fr;gap:3rem}
+}
+
+/* =================  FOOTER  ================= */
+footer{
+  background:#080313;padding:3rem 2rem 2rem;
+  border-top:1px solid var(--line);
+}
+.footer-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1.5rem;
+}
+.footer-brand{
+  font-family:var(--font-serif);font-size:0.85rem;letter-spacing:0.3em;
+  color:var(--gold);font-weight:600;
+}
+.footer-meta{
+  font-size:0.78rem;color:var(--mute);letter-spacing:0.05em;
+}
+.footer-meta a:hover{color:var(--gold-light)}
+
+/* =================  REVEAL ANIMATIONS  ================= */
+.reveal{
+  opacity:0;transform:translateY(40px);
+  transition:opacity 0.8s ease,transform 0.8s ease;
+  animation:cssRevealFallback 0.8s ease 2.5s forwards;
+}
+.reveal.visible{opacity:1;transform:translateY(0);animation:none}
+@keyframes cssRevealFallback{to{opacity:1;transform:none}}
+
+/* =================  MULTILINGUAL  ================= */
+[data-i18n-en],[data-i18n-de]{display:none}
+[data-lang="es"] [data-i18n-es]{display:revert}
+[data-lang="en"] [data-i18n-en]{display:revert}
+[data-lang="en"] [data-i18n-es]{display:none}
+[data-lang="de"] [data-i18n-de]{display:revert}
+[data-lang="de"] [data-i18n-es]{display:none}
+[data-lang="en"] [data-i18n-de]{display:none}
+[data-lang="de"] [data-i18n-en]{display:none}
+
+/* =================  RESPONSIVE  ================= */
+@media (max-width:780px){
+  section{padding:4.5rem 1.4rem}
+  .hero{padding:5rem 1.4rem 4rem}
+  .hero-edition{font-size:0.78rem;letter-spacing:0.4em;padding:0.4rem 1rem}
+  .hero-cta .btn{padding:0.9rem 1.4rem;font-size:0.72rem}
+}
+
+</style>
+</head>
+<body data-lang="es">
+
+<!-- ============== LOADER ============== -->
+<div class="loader" id="loader">
+  <div class="loader-logo" aria-label="Teror es Magia">
+    <span>T</span><span>E</span><span>R</span><span>O</span><span>R</span><span>·</span>
+    <span>M</span><span>A</span><span>G</span><span>I</span><span>A</span>
+  </div>
+</div>
+
+<!-- ============== NAVBAR ============== -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-brand">
+    <i class="fa-solid fa-wand-magic-sparkles"></i>
+    <span>TEROR · MAGIA</span>
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#sobre"><span data-i18n-es>Festival</span><span data-i18n-en>Festival</span><span data-i18n-de>Festival</span></a></li>
+    <li><a href="#programa"><span data-i18n-es>Programa</span><span data-i18n-en>Program</span><span data-i18n-de>Programm</span></a></li>
+    <li><a href="#ediciones"><span data-i18n-es>Ediciones</span><span data-i18n-en>Past Editions</span><span data-i18n-de>Ausgaben</span></a></li>
+    <li><a href="#sostenibilidad"><span data-i18n-es>Sostenibilidad</span><span data-i18n-en>Sustainability</span><span data-i18n-de>Nachhaltigkeit</span></a></li>
+    <li><a href="#ubicacion"><span data-i18n-es>Ubicación</span><span data-i18n-en>Location</span><span data-i18n-de>Anfahrt</span></a></li>
+    <li><a href="#entradas" class="nav-cta"><span data-i18n-es>Entradas</span><span data-i18n-en>Tickets</span><span data-i18n-de>Tickets</span></a></li>
+    <li class="lang-switch">
+      <button class="lang-btn active" data-lang-btn="es">ES</button>
+      <button class="lang-btn" data-lang-btn="en">EN</button>
+      <button class="lang-btn" data-lang-btn="de">DE</button>
+    </li>
+  </ul>
+</nav>
+
+<!-- ============== HERO ============== -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-edition reveal">
+      <span data-i18n-es>X EDICIÓN</span>
+      <span data-i18n-en>10<sup>th</sup> EDITION</span>
+      <span data-i18n-de>X. AUSGABE</span>
+    </div>
+    <h1 class="hero-title reveal">
+      Teror <span class="gold">es</span><br>Magia
+    </h1>
+    <p class="hero-sub reveal">
+      <span data-i18n-es>Festival de Magia de la Villa de Teror</span>
+      <span data-i18n-en>Magic Festival · Villa de Teror</span>
+      <span data-i18n-de>Zauberfestival · Villa de Teror</span>
+    </p>
+    <div class="hero-dates reveal">9 — 11 · OCTUBRE · 2026</div>
+    <div class="hero-place reveal">
+      <span data-i18n-es>Auditorio de Teror · Gran Canaria</span>
+      <span data-i18n-en>Teror Auditorium · Gran Canaria</span>
+      <span data-i18n-de>Auditorium Teror · Gran Canaria</span>
+    </div>
+    <div class="hero-cta reveal">
+      <a href="#entradas" class="btn btn-primary btn-large">
+        <i class="fa-solid fa-ticket"></i>
+        <span data-i18n-es>Comprar entradas</span>
+        <span data-i18n-en>Buy tickets</span>
+        <span data-i18n-de>Tickets kaufen</span>
+      </a>
+      <a href="#programa" class="btn btn-ghost btn-large">
+        <span data-i18n-es>Ver programa</span>
+        <span data-i18n-en>See program</span>
+        <span data-i18n-de>Programm ansehen</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+  <a href="#sobre" class="hero-scroll">
+    <span data-i18n-es>Descubrir</span>
+    <span data-i18n-en>Discover</span>
+    <span data-i18n-de>Entdecken</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+</header>
+
+<!-- ============== SOBRE ============== -->
+<section id="sobre">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="section-label reveal">
+          <span data-i18n-es>El festival</span>
+          <span data-i18n-en>The festival</span>
+          <span data-i18n-de>Das Festival</span>
+        </div>
+        <h2 class="section-title reveal">
+          <span data-i18n-es>Diez años haciendo de Teror la <em>capital de la magia</em> en Canarias.</span>
+          <span data-i18n-en>Ten years turning Teror into the <em>capital of magic</em> in the Canary Islands.</span>
+          <span data-i18n-de>Zehn Jahre, in denen Teror zur <em>Hauptstadt der Zauberkunst</em> auf den Kanaren wurde.</span>
+        </h2>
+        <div class="about-text reveal">
+          <p class="lead" data-i18n-es>Cada otoño, la Villa Mariana de Teror se transforma. Sus calles empedradas, sus balcones canarios y su Auditorio acogen durante tres días a algunos de los magos más sorprendentes del panorama nacional e internacional.</p>
+          <p class="lead" data-i18n-en>Every autumn, the Marian Village of Teror transforms itself. Its cobbled streets, its Canarian balconies and its Auditorium host some of the most extraordinary magicians of the national and international scene for three days.</p>
+          <p class="lead" data-i18n-de>Jeden Herbst verwandelt sich das marianische Dorf Teror. Seine gepflasterten Gassen, seine kanarischen Balkone und sein Auditorium beherbergen drei Tage lang einige der erstaunlichsten Magier der nationalen und internationalen Szene.</p>
+
+          <p data-i18n-es>Lo que comenzó en 2017 como una pequeña apuesta del Auditorio de Teror y el Ayuntamiento, es hoy un encuentro consolidado donde ilusionismo, mentalismo, magia cómica y magia de cerca conviven en un mismo programa pensado para todos los públicos.</p>
+          <p data-i18n-en>What began in 2017 as a small bet by the Teror Auditorium and the Town Hall is today a consolidated meeting where illusionism, mentalism, comedy magic and close-up magic share a single program designed for all audiences.</p>
+          <p data-i18n-de>Was 2017 als kleine Wette des Auditoriums von Teror und der Gemeindeverwaltung begann, ist heute ein etabliertes Treffen, bei dem Illusionismus, Mentalismus, Comedy-Zauberei und Close-Up-Magie in einem Programm für alle Altersgruppen vereint sind.</p>
+
+          <p data-i18n-es><strong>"Teror es Magia"</strong> es ya una cita imprescindible del calendario cultural de Gran Canaria: espectáculos en el Auditorio, magia en la calle, la Feria de los Imposibles en la Plaza Sintes y experiencias mágicas para colegios y familias.</p>
+          <p data-i18n-en><strong>"Teror es Magia"</strong> is now an unmissable date in Gran Canaria's cultural calendar: shows at the Auditorium, street magic, the "Feria de los Imposibles" at Plaza Sintes and magical experiences for schools and families.</p>
+          <p data-i18n-de><strong>"Teror es Magia"</strong> ist heute ein fester Termin im Kulturkalender von Gran Canaria: Aufführungen im Auditorium, Straßenmagie, die "Feria de los Imposibles" auf der Plaza Sintes und magische Erlebnisse für Schulen und Familien.</p>
+        </div>
+      </div>
+      <div class="about-visual reveal">
+        <i class="fa-solid fa-hat-wizard"></i>
+      </div>
+    </div>
+    <div class="about-stats reveal">
+      <div class="stat">
+        <div class="stat-num">10</div>
+        <div class="stat-label">
+          <span data-i18n-es>Ediciones</span>
+          <span data-i18n-en>Editions</span>
+          <span data-i18n-de>Ausgaben</span>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">+60</div>
+        <div class="stat-label">
+          <span data-i18n-es>Artistas en escena</span>
+          <span data-i18n-en>Artists on stage</span>
+          <span data-i18n-de>Künstler auf der Bühne</span>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">+15k</div>
+        <div class="stat-label">
+          <span data-i18n-es>Espectadores</span>
+          <span data-i18n-en>Spectators</span>
+          <span data-i18n-de>Zuschauer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PROGRAMA / ARTISTAS ============== -->
+<section id="programa">
+  <div class="container">
+    <div class="section-label reveal">
+      <span data-i18n-es>Programa 2026</span>
+      <span data-i18n-en>Program 2026</span>
+      <span data-i18n-de>Programm 2026</span>
+    </div>
+    <h2 class="section-title reveal">
+      <span data-i18n-es>Tres días, seis espectáculos, <em>una sola magia</em>.</span>
+      <span data-i18n-en>Three days, six shows, <em>one single magic</em>.</span>
+      <span data-i18n-de>Drei Tage, sechs Shows, <em>eine einzige Magie</em>.</span>
+    </h2>
+    <p class="section-intro reveal">
+      <span data-i18n-es>El cartel de la X edición de "Teror es Magia" se irá desvelando en las próximas semanas. Magia de escena, mentalismo, magia infantil y magia de cerca se darán cita del 9 al 11 de octubre de 2026.</span>
+      <span data-i18n-en>The lineup of the 10<sup>th</sup> edition of "Teror es Magia" will be revealed in the coming weeks. Stage magic, mentalism, family magic and close-up magic come together from October 9 to 11, 2026.</span>
+      <span data-i18n-de>Das Programm der 10. Ausgabe von "Teror es Magia" wird in den kommenden Wochen bekannt gegeben. Bühnenzauber, Mentalismus, Familienzauber und Close-Up-Magie treffen sich vom 9. bis 11. Oktober 2026.</span>
+    </p>
+
+    <div class="lineup-history reveal">
+      <div class="lineup-label">
+        <span data-i18n-es>Han pasado por Teror</span>
+        <span data-i18n-en>Have performed in Teror</span>
+        <span data-i18n-de>Sind in Teror aufgetreten</span>
+      </div>
+      <div class="lineup-names">
+        Héctor Sansegundo · Shado el Mago · Inmagic · Raúl Magic · Archi el Mago · Pepín Banzo · Amadeo Edama · Miriam Santana · Toto el Payaso · Javier Botía · Cliff the Magician · Kayto · Alberto de Figueiredo · Juan Salvador &amp; Jessica Guloomal · Jorge Blass
+      </div>
+      <div class="past-artists">
+        <div class="past-artist" style="background-image:url('img/artistas/Hector Sansegundo.jpg')"><div class="name">Héctor Sansegundo</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Shado el Mago.jpg')"><div class="name">Shado el Mago</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Inmagic.jpg')"><div class="name">Inmagic</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Raul Magic.jpg')"><div class="name">Raúl Magic</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Archi el Mago.jpg')"><div class="name">Archi el Mago</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Pepin Banzo.jpg')"><div class="name">Pepín Banzo</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Amadeo Edama.jpg')"><div class="name">Amadeo Edama</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Miriam Santana.jpg')"><div class="name">Miriam Santana</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Toto el Payaso.jpg')"><div class="name">Toto el Payaso</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Javier Botia.jpg')"><div class="name">Javier Botía</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Cliff the Magician.jpg')"><div class="name">Cliff the Magician</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Kayto.jpg')"><div class="name">Kayto</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Alberto de Figueiredo.jpg')"><div class="name">Alberto de Figueiredo</div></div>
+        <div class="past-artist" style="background-image:url('img/artistas/Jorge Blass.jpg')"><div class="name">Jorge Blass</div></div>
+      </div>
+    </div>
+
+    <div class="artists-grid">
+      <article class="artist-card reveal">
+        <div class="artist-img tba"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="artist-info">
+          <div class="artist-country">
+            <span data-i18n-es>Función inaugural</span>
+            <span data-i18n-en>Opening show</span>
+            <span data-i18n-de>Eröffnungsshow</span>
+          </div>
+          <h3 class="artist-name">
+            <span data-i18n-es>Por anunciar</span>
+            <span data-i18n-en>To be announced</span>
+            <span data-i18n-de>Wird bekannt gegeben</span>
+          </h3>
+          <p class="artist-show">"—"</p>
+          <p class="artist-desc">
+            <span data-i18n-es>El artista que abrirá la X edición se desvelará próximamente.</span>
+            <span data-i18n-en>The artist opening the 10<sup>th</sup> edition will be revealed soon.</span>
+            <span data-i18n-de>Der Künstler, der die 10. Ausgabe eröffnet, wird in Kürze bekannt gegeben.</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="artist-card reveal">
+        <div class="artist-img tba"><i class="fa-solid fa-eye"></i></div>
+        <div class="artist-info">
+          <div class="artist-country">
+            <span data-i18n-es>Mentalismo</span>
+            <span data-i18n-en>Mentalism</span>
+            <span data-i18n-de>Mentalismus</span>
+          </div>
+          <h3 class="artist-name">
+            <span data-i18n-es>Por anunciar</span>
+            <span data-i18n-en>To be announced</span>
+            <span data-i18n-de>Wird bekannt gegeben</span>
+          </h3>
+          <p class="artist-show">"—"</p>
+          <p class="artist-desc">
+            <span data-i18n-es>Una experiencia de mentalismo donde la mente es el escenario principal.</span>
+            <span data-i18n-en>A mentalism experience where the mind is the main stage.</span>
+            <span data-i18n-de>Eine Mentalismus-Erfahrung, bei der der Geist die Hauptbühne ist.</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="artist-card reveal">
+        <div class="artist-img tba"><i class="fa-solid fa-star"></i></div>
+        <div class="artist-info">
+          <div class="artist-country">
+            <span data-i18n-es>Magia familiar</span>
+            <span data-i18n-en>Family magic</span>
+            <span data-i18n-de>Familienzauber</span>
+          </div>
+          <h3 class="artist-name">
+            <span data-i18n-es>Por anunciar</span>
+            <span data-i18n-en>To be announced</span>
+            <span data-i18n-de>Wird bekannt gegeben</span>
+          </h3>
+          <p class="artist-show">"—"</p>
+          <p class="artist-desc">
+            <span data-i18n-es>Magia para soñar despiertos: la cita imprescindible para toda la familia.</span>
+            <span data-i18n-en>Magic to dream wide awake: the must-see show for the whole family.</span>
+            <span data-i18n-de>Zauberei, um wach zu träumen: das Muss für die ganze Familie.</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="artist-card reveal">
+        <div class="artist-img tba"><i class="fa-solid fa-masks-theater"></i></div>
+        <div class="artist-info">
+          <div class="artist-country">
+            <span data-i18n-es>Magia cómica</span>
+            <span data-i18n-en>Comedy magic</span>
+            <span data-i18n-de>Comedy-Zauber</span>
+          </div>
+          <h3 class="artist-name">
+            <span data-i18n-es>Por anunciar</span>
+            <span data-i18n-en>To be announced</span>
+            <span data-i18n-de>Wird bekannt gegeben</span>
+          </h3>
+          <p class="artist-show">"—"</p>
+          <p class="artist-desc">
+            <span data-i18n-es>Donde el ilusionismo y la carcajada se dan la mano sobre el escenario.</span>
+            <span data-i18n-en>Where illusionism and laughter join hands on stage.</span>
+            <span data-i18n-de>Wo Illusionismus und Lachen auf der Bühne Hand in Hand gehen.</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="artist-card reveal">
+        <div class="artist-img tba"><i class="fa-solid fa-fingerprint"></i></div>
+        <div class="artist-info">
+          <div class="artist-country">
+            <span data-i18n-es>Magia de cerca</span>
+            <span data-i18n-en>Close-up magic</span>
+            <span data-i18n-de>Close-Up-Magie</span>
+          </div>
+          <h3 class="artist-name">
+            <span data-i18n-es>Por anunciar</span>
+            <span data-i18n-en>To be announced</span>
+            <span data-i18n-de>Wird bekannt gegeben</span>
+          </h3>
+          <p class="artist-show">"—"</p>
+          <p class="artist-desc">
+            <span data-i18n-es>Magia íntima en la palma de la mano, a un palmo del espectador.</span>
+            <span data-i18n-en>Intimate magic in the palm of your hand, inches from the audience.</span>
+            <span data-i18n-de>Intime Magie in der Handfläche, nur Zentimeter vom Publikum entfernt.</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="artist-card reveal">
+        <div class="artist-img tba"><i class="fa-solid fa-moon"></i></div>
+        <div class="artist-info">
+          <div class="artist-country">
+            <span data-i18n-es>Gala de clausura</span>
+            <span data-i18n-en>Closing gala</span>
+            <span data-i18n-de>Abschlussgala</span>
+          </div>
+          <h3 class="artist-name">
+            <span data-i18n-es>Por anunciar</span>
+            <span data-i18n-en>To be announced</span>
+            <span data-i18n-de>Wird bekannt gegeben</span>
+          </h3>
+          <p class="artist-show">"—"</p>
+          <p class="artist-desc">
+            <span data-i18n-es>Una despedida a lo grande: el broche dorado de la X edición.</span>
+            <span data-i18n-en>A grand finale: the golden seal of the 10<sup>th</sup> edition.</span>
+            <span data-i18n-de>Ein großes Finale: der goldene Abschluss der 10. Ausgabe.</span>
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="program-timeline reveal">
+      <h3 style="font-family:var(--font-display);font-size:2rem;font-weight:500;color:var(--gold-light);margin-bottom:0.6rem;">
+        <span data-i18n-es>Calendario</span>
+        <span data-i18n-en>Schedule</span>
+        <span data-i18n-de>Kalender</span>
+      </h3>
+      <p style="color:var(--mute);font-size:0.92rem;margin-bottom:2.5rem;">
+        <span data-i18n-es>Avance del programa por días (sujeto a confirmación).</span>
+        <span data-i18n-en>Preview of the program by day (subject to confirmation).</span>
+        <span data-i18n-de>Vorläufiges Programm nach Tagen (vorbehaltlich Bestätigung).</span>
+      </p>
+      <div class="timeline-grid">
+        <div class="day-block reveal">
+          <div class="day-num">09</div>
+          <div class="day-month">
+            <span data-i18n-es>Viernes · Octubre</span>
+            <span data-i18n-en>Friday · October</span>
+            <span data-i18n-de>Freitag · Oktober</span>
+          </div>
+          <div class="day-event">
+            <div class="event-time">18:00 h</div>
+            <div class="event-title">
+              <span data-i18n-es>Función inaugural</span>
+              <span data-i18n-en>Opening show</span>
+              <span data-i18n-de>Eröffnungsshow</span>
+            </div>
+            <div class="event-place">
+              <span data-i18n-es>Auditorio de Teror</span>
+              <span data-i18n-en>Teror Auditorium</span>
+              <span data-i18n-de>Auditorium Teror</span>
+            </div>
+          </div>
+          <div class="day-event">
+            <div class="event-time">21:00 h</div>
+            <div class="event-title">
+              <span data-i18n-es>Magia en la calle</span>
+              <span data-i18n-en>Street magic</span>
+              <span data-i18n-de>Straßenmagie</span>
+            </div>
+            <div class="event-place">
+              <span data-i18n-es>Plaza Teresa de Bolívar</span>
+              <span data-i18n-en>Teresa de Bolívar Square</span>
+              <span data-i18n-de>Plaza Teresa de Bolívar</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-block reveal">
+          <div class="day-num">10</div>
+          <div class="day-month">
+            <span data-i18n-es>Sábado · Octubre</span>
+            <span data-i18n-en>Saturday · October</span>
+            <span data-i18n-de>Samstag · Oktober</span>
+          </div>
+          <div class="day-event">
+            <div class="event-time">16:00 — 19:00 h</div>
+            <div class="event-title">
+              <span data-i18n-es>Feria de los Imposibles</span>
+              <span data-i18n-en>Fair of the Impossibles</span>
+              <span data-i18n-de>Messe der Unmöglichkeiten</span>
+            </div>
+            <div class="event-place">
+              <span data-i18n-es>Plaza Sintes</span>
+              <span data-i18n-en>Sintes Square</span>
+              <span data-i18n-de>Plaza Sintes</span>
+            </div>
+          </div>
+          <div class="day-event">
+            <div class="event-time">18:00 h</div>
+            <div class="event-title">
+              <span data-i18n-es>Magia de escena</span>
+              <span data-i18n-en>Stage magic</span>
+              <span data-i18n-de>Bühnenzauber</span>
+            </div>
+            <div class="event-place">
+              <span data-i18n-es>Auditorio de Teror</span>
+              <span data-i18n-en>Teror Auditorium</span>
+              <span data-i18n-de>Auditorium Teror</span>
+            </div>
+          </div>
+          <div class="day-event">
+            <div class="event-time">21:00 h</div>
+            <div class="event-title">
+              <span data-i18n-es>Mentalismo</span>
+              <span data-i18n-en>Mentalism</span>
+              <span data-i18n-de>Mentalismus</span>
+            </div>
+            <div class="event-place">
+              <span data-i18n-es>Auditorio de Teror</span>
+              <span data-i18n-en>Teror Auditorium</span>
+              <span data-i18n-de>Auditorium Teror</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-block reveal">
+          <div class="day-num">11</div>
+          <div class="day-month">
+            <span data-i18n-es>Domingo · Octubre</span>
+            <span data-i18n-en>Sunday · October</span>
+            <span data-i18n-de>Sonntag · Oktober</span>
+          </div>
+          <div class="day-event">
+            <div class="event-time">11:00 — 14:00 h</div>
+            <div class="event-title">
+              <span data-i18n-es>Feria de los Imposibles</span>
+              <span data-i18n-en>Fair of the Impossibles</span>
+              <span data-i18n-de>Messe der Unmöglichkeiten</span>
+            </div>
+            <div class="event-place">
+              <span data-i18n-es>Plaza Sintes</span>
+              <span data-i18n-en>Sintes Square</span>
+              <span data-i18n-de>Plaza Sintes</span>
+            </div>
+          </div>
+          <div class="day-event">
+            <div class="event-time">12:00 h</div>
+            <div class="event-title">
+              <span data-i18n-es>Magia familiar</span>
+              <span data-i18n-en>Family magic</span>
+              <span data-i18n-de>Familienzauber</span>
+            </div>
+            <div class="event-place">
+              <span data-i18n-es>Auditorio de Teror</span>
+              <span data-i18n-en>Teror Auditorium</span>
+              <span data-i18n-de>Auditorium Teror</span>
+            </div>
+          </div>
+          <div class="day-event">
+            <div class="event-time">17:00 h</div>
+            <div class="event-title">
+              <span data-i18n-es>Gala de clausura</span>
+              <span data-i18n-en>Closing gala</span>
+              <span data-i18n-de>Abschlussgala</span>
+            </div>
+            <div class="event-place">
+              <span data-i18n-es>Auditorio de Teror</span>
+              <span data-i18n-en>Teror Auditorium</span>
+              <span data-i18n-de>Auditorium Teror</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== EDICIONES ANTERIORES ============== -->
+<section id="ediciones">
+  <div class="container">
+    <div class="section-label reveal">
+      <span data-i18n-es>Ediciones anteriores</span>
+      <span data-i18n-en>Past editions</span>
+      <span data-i18n-de>Vergangene Ausgaben</span>
+    </div>
+    <h2 class="section-title reveal">
+      <span data-i18n-es>Una década de <em>asombro</em>.</span>
+      <span data-i18n-en>A decade of <em>wonder</em>.</span>
+      <span data-i18n-de>Ein Jahrzehnt voller <em>Staunen</em>.</span>
+    </h2>
+    <p class="section-intro reveal">
+      <span data-i18n-es>Desde 2017, "Teror es Magia" ha llenado el Auditorio y las calles de la Villa con espectáculos de algunos de los mejores ilusionistas del país. Estos son algunos de los hitos del camino.</span>
+      <span data-i18n-en>Since 2017, "Teror es Magia" has filled the Auditorium and the streets of the village with shows by some of the country's best illusionists. Here are some milestones along the way.</span>
+      <span data-i18n-de>Seit 2017 hat "Teror es Magia" das Auditorium und die Straßen des Dorfes mit Aufführungen einiger der besten Illusionisten des Landes gefüllt. Hier einige Meilensteine.</span>
+    </p>
+
+    <div class="editions-track">
+      <div class="edition-card reveal" style="background-image:url('img/ediciones/edicion-IX-2025.jpg')">
+        <div class="edition-meta">
+          <div class="edition-roman">IX</div>
+          <div class="edition-year">2025 · 10-12 OCT</div>
+          <div class="edition-title">
+            <span data-i18n-es>Archi, Sansegundo, Shado, Inmagic, Raúl Magic</span>
+            <span data-i18n-en>Archi, Sansegundo, Shado, Inmagic, Raúl Magic</span>
+            <span data-i18n-de>Archi, Sansegundo, Shado, Inmagic, Raúl Magic</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edition-card reveal" style="background-image:url('img/ediciones/edicion-VIII-2024.jpg')">
+        <div class="edition-meta">
+          <div class="edition-roman">VIII</div>
+          <div class="edition-year">2024 · 11-13 OCT</div>
+          <div class="edition-title">
+            <span data-i18n-es>Pepín Banzo, Amadeo Edama, Miriam Santana</span>
+            <span data-i18n-en>Pepín Banzo, Amadeo Edama, Miriam Santana</span>
+            <span data-i18n-de>Pepín Banzo, Amadeo Edama, Miriam Santana</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edition-card reveal" style="background-image:url('img/ediciones/edicion-VII-2023.jpg')">
+        <div class="edition-meta">
+          <div class="edition-roman">VII</div>
+          <div class="edition-year">2023 · MÍSTICO</div>
+          <div class="edition-title">
+            <span data-i18n-es>La edición del mentalismo</span>
+            <span data-i18n-en>The mentalism edition</span>
+            <span data-i18n-de>Die Ausgabe des Mentalismus</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edition-card reveal" style="background-image:url('img/ediciones/edicion-VI-2022.jpg')">
+        <div class="edition-meta">
+          <div class="edition-roman">VI</div>
+          <div class="edition-year">2022 · 7-9 OCT</div>
+          <div class="edition-title">
+            <span data-i18n-es>Toto el Payaso, Javier Botía, Cliff the Magician</span>
+            <span data-i18n-en>Toto el Payaso, Javier Botía, Cliff the Magician</span>
+            <span data-i18n-de>Toto el Payaso, Javier Botía, Cliff the Magician</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edition-card reveal" style="background-image:url('img/ediciones/edicion-V-2021.jpg')">
+        <div class="edition-meta">
+          <div class="edition-roman">V</div>
+          <div class="edition-year">2021</div>
+          <div class="edition-title">
+            <span data-i18n-es>La Maga · Vuelve la magia</span>
+            <span data-i18n-en>La Maga · Magic returns</span>
+            <span data-i18n-de>La Maga · Die Magie kehrt zurück</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edition-card reveal" style="background-image:url('img/ediciones/edicion-IV-2020.jpg')">
+        <div class="edition-meta">
+          <div class="edition-roman">IV</div>
+          <div class="edition-year">2020</div>
+          <div class="edition-title">
+            <span data-i18n-es>Edición especial · Aforo reducido</span>
+            <span data-i18n-en>Special edition · Reduced capacity</span>
+            <span data-i18n-de>Sonderausgabe · Reduzierte Kapazität</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edition-card reveal" style="background-image:url('img/ediciones/edicion-III-2019.jpg')">
+        <div class="edition-meta">
+          <div class="edition-roman">III</div>
+          <div class="edition-year">2019</div>
+          <div class="edition-title">
+            <span data-i18n-es>Magia de cerca en la Villa</span>
+            <span data-i18n-en>Close-up magic in the Village</span>
+            <span data-i18n-de>Close-Up-Magie im Dorf</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edition-card reveal" style="background-image:url('img/ediciones/edicion-I-2017.jpg')">
+        <div class="edition-meta">
+          <div class="edition-roman">I</div>
+          <div class="edition-year">2017 · 10-12 NOV</div>
+          <div class="edition-title">
+            <span data-i18n-es>Sansegundo, Kayto, De Figueiredo, J. Salvador & J. Guloomal</span>
+            <span data-i18n-en>Sansegundo, Kayto, De Figueiredo, J. Salvador & J. Guloomal</span>
+            <span data-i18n-de>Sansegundo, Kayto, De Figueiredo, J. Salvador & J. Guloomal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SOSTENIBILIDAD ============== -->
+<section id="sostenibilidad">
+  <div class="container">
+    <div class="section-label reveal">
+      <span data-i18n-es>Compromiso</span>
+      <span data-i18n-en>Commitment</span>
+      <span data-i18n-de>Verpflichtung</span>
+    </div>
+    <h2 class="section-title reveal">
+      <span data-i18n-es>Un festival que cree en <em>la magia de cuidar el entorno</em>.</span>
+      <span data-i18n-en>A festival that believes in the <em>magic of caring for our environment</em>.</span>
+      <span data-i18n-de>Ein Festival, das an die <em>Magie glaubt, die Umwelt zu schützen</em>.</span>
+    </h2>
+    <p class="section-intro reveal">
+      <span data-i18n-es>Hacer magia en una Reserva de la Biosfera implica una responsabilidad. "Teror es Magia" trabaja con criterios de sostenibilidad medioambiental, social y cultural en cada edición.</span>
+      <span data-i18n-en>Performing magic in a Biosphere Reserve carries a responsibility. "Teror es Magia" applies environmental, social and cultural sustainability criteria in every edition.</span>
+      <span data-i18n-de>Magie in einem Biosphärenreservat zu inszenieren bedeutet Verantwortung. "Teror es Magia" wendet bei jeder Ausgabe ökologische, soziale und kulturelle Nachhaltigkeitskriterien an.</span>
+    </p>
+
+    <div class="sus-grid">
+      <div class="sus-card reveal">
+        <div class="sus-icon"><i class="fa-solid fa-recycle"></i></div>
+        <h4>
+          <span data-i18n-es>Cero plásticos de un solo uso</span>
+          <span data-i18n-en>No single-use plastics</span>
+          <span data-i18n-de>Keine Einwegkunststoffe</span>
+        </h4>
+        <p>
+          <span data-i18n-es>Eliminamos botellas y vasos de plástico en todas las sedes. Puntos de agua reutilizable y materiales biodegradables.</span>
+          <span data-i18n-en>We remove plastic bottles and cups from all venues. Reusable water stations and biodegradable materials.</span>
+          <span data-i18n-de>Wir verzichten an allen Spielstätten auf Plastikflaschen und -becher. Wiederverwendbare Wasserstationen und biologisch abbaubare Materialien.</span>
+        </p>
+      </div>
+
+      <div class="sus-card reveal">
+        <div class="sus-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h4>
+          <span data-i18n-es>Producción de cercanía</span>
+          <span data-i18n-en>Local production</span>
+          <span data-i18n-de>Produktion vor Ort</span>
+        </h4>
+        <p>
+          <span data-i18n-es>Equipo técnico, transporte y catering del festival a cargo de empresas locales de la comarca norte de Gran Canaria.</span>
+          <span data-i18n-en>Technical crew, transport and catering provided by local companies from the northern region of Gran Canaria.</span>
+          <span data-i18n-de>Technisches Team, Transport und Catering durch lokale Unternehmen aus dem Norden Gran Canarias.</span>
+        </p>
+      </div>
+
+      <div class="sus-card reveal">
+        <div class="sus-icon"><i class="fa-solid fa-children"></i></div>
+        <h4>
+          <span data-i18n-es>Magia inclusiva</span>
+          <span data-i18n-en>Inclusive magic</span>
+          <span data-i18n-de>Inklusive Magie</span>
+        </h4>
+        <p>
+          <span data-i18n-es>Funciones escolares gratuitas, accesibilidad en el Auditorio y entradas a precios populares (3-5 €) para toda la programación.</span>
+          <span data-i18n-en>Free school performances, accessibility at the Auditorium and affordable tickets (3-5 €) across the program.</span>
+          <span data-i18n-de>Kostenlose Schulvorstellungen, Barrierefreiheit im Auditorium und erschwingliche Tickets (3-5 €) im gesamten Programm.</span>
+        </p>
+      </div>
+
+      <div class="sus-card reveal">
+        <div class="sus-icon"><i class="fa-solid fa-print"></i></div>
+        <h4>
+          <span data-i18n-es>Comunicación responsable</span>
+          <span data-i18n-en>Responsible communication</span>
+          <span data-i18n-de>Verantwortungsvolle Kommunikation</span>
+        </h4>
+        <p>
+          <span data-i18n-es>Reducimos al mínimo el material impreso, priorizando entradas digitales y comunicación online en redes sociales.</span>
+          <span data-i18n-en>We minimize printed material, prioritizing digital tickets and online communication on social networks.</span>
+          <span data-i18n-de>Wir minimieren Druckmaterialien und setzen auf digitale Tickets und Online-Kommunikation in sozialen Netzwerken.</span>
+        </p>
+      </div>
+
+      <div class="sus-card reveal">
+        <div class="sus-icon"><i class="fa-solid fa-bus"></i></div>
+        <h4>
+          <span data-i18n-es>Movilidad sostenible</span>
+          <span data-i18n-en>Sustainable mobility</span>
+          <span data-i18n-de>Nachhaltige Mobilität</span>
+        </h4>
+        <p>
+          <span data-i18n-es>Promovemos el uso del transporte público (líneas Global 220 y 226) y rutas a pie por el casco histórico para acceder a los espectáculos.</span>
+          <span data-i18n-en>We promote the use of public transport (Global lines 220 and 226) and walking routes through the old town to access the shows.</span>
+          <span data-i18n-de>Wir fördern öffentliche Verkehrsmittel (Linien Global 220 und 226) und Fußwege durch die Altstadt, um zu den Aufführungen zu gelangen.</span>
+        </p>
+      </div>
+
+      <div class="sus-card reveal">
+        <div class="sus-icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
+        <h4>
+          <span data-i18n-es>Patrimonio vivo</span>
+          <span data-i18n-en>Living heritage</span>
+          <span data-i18n-de>Lebendiges Erbe</span>
+        </h4>
+        <p>
+          <span data-i18n-es>Programación pensada para dinamizar el comercio, la artesanía y la hostelería del casco histórico de Teror durante el fin de semana.</span>
+          <span data-i18n-en>Programming designed to energize commerce, crafts and hospitality in Teror's old town during the weekend.</span>
+          <span data-i18n-de>Programm zur Belebung von Handel, Handwerk und Gastronomie in der Altstadt von Teror während des Wochenendes.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ENTRADAS ============== -->
+<section id="entradas">
+  <div class="container">
+    <div class="tickets-wrap">
+      <div class="section-label reveal">
+        <span data-i18n-es>Entradas</span>
+        <span data-i18n-en>Tickets</span>
+        <span data-i18n-de>Tickets</span>
+      </div>
+      <h2 class="section-title reveal" style="margin-bottom:0.5rem">
+        <span data-i18n-es>La magia a precio <em>popular</em>.</span>
+        <span data-i18n-en>Magic at a <em>popular</em> price.</span>
+        <span data-i18n-de>Zauberei zum <em>volkstümlichen</em> Preis.</span>
+      </h2>
+      <div class="tickets-price reveal">3 — 5 <small>€</small></div>
+      <p class="tickets-note reveal">
+        <span data-i18n-es>Entradas por espectáculo · Aforo limitado · Venta en taquilla y online</span>
+        <span data-i18n-en>Tickets per show · Limited capacity · On sale at the box office and online</span>
+        <span data-i18n-de>Tickets pro Show · Begrenzte Kapazität · Verkauf an der Kasse und online</span>
+      </p>
+
+      <div class="tickets-cta reveal">
+        <a href="https://entradas.tureservaonline.es" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+          <i class="fa-solid fa-ticket"></i>
+          <span data-i18n-es>Comprar online</span>
+          <span data-i18n-en>Buy online</span>
+          <span data-i18n-de>Online kaufen</span>
+        </a>
+        <a href="https://auditorio.teror.es" target="_blank" rel="noopener" class="btn btn-ghost btn-large">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <span data-i18n-es>Auditorio de Teror</span>
+          <span data-i18n-en>Teror Auditorium</span>
+          <span data-i18n-de>Auditorium Teror</span>
+        </a>
+      </div>
+
+      <div class="tickets-feria reveal">
+        <h4>
+          <span data-i18n-es>Feria de los Imposibles</span>
+          <span data-i18n-en>Fair of the Impossibles</span>
+          <span data-i18n-de>Messe der Unmöglichkeiten</span>
+        </h4>
+        <p>
+          <span data-i18n-es>Magia en la calle, juegos de participación y experiencias para todos los públicos en la Plaza Sintes durante el sábado tarde y el domingo por la mañana.</span>
+          <span data-i18n-en>Street magic, participation games and experiences for all audiences at Plaza Sintes on Saturday afternoon and Sunday morning.</span>
+          <span data-i18n-de>Straßenmagie, Mitmachspiele und Erlebnisse für alle Zielgruppen auf der Plaza Sintes am Samstagnachmittag und Sonntagvormittag.</span>
+        </p>
+        <div class="free-tag">
+          <span data-i18n-es>Entrada gratuita</span>
+          <span data-i18n-en>Free entry</span>
+          <span data-i18n-de>Freier Eintritt</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== UBICACION ============== -->
+<section id="ubicacion">
+  <div class="container">
+    <div class="section-label reveal">
+      <span data-i18n-es>Cómo llegar</span>
+      <span data-i18n-en>How to get there</span>
+      <span data-i18n-de>Anfahrt</span>
+    </div>
+    <h2 class="section-title reveal" style="margin-bottom:3rem">
+      <span data-i18n-es>Teror, <em>Villa Mariana</em> de Gran Canaria.</span>
+      <span data-i18n-en>Teror, <em>Marian Village</em> of Gran Canaria.</span>
+      <span data-i18n-de>Teror, <em>marianisches Dorf</em> Gran Canarias.</span>
+    </h2>
+
+    <div class="location-grid">
+      <div class="location-info reveal">
+        <h3>
+          <span data-i18n-es>Auditorio de Teror</span>
+          <span data-i18n-en>Teror Auditorium</span>
+          <span data-i18n-de>Auditorium Teror</span>
+        </h3>
+        <p>
+          <span data-i18n-es>El Auditorio Municipal de Teror, sede principal del festival, está a 25 minutos en coche del centro de Las Palmas de Gran Canaria. Una visita perfecta para descubrir el casco histórico y la Basílica del Pino tras los espectáculos.</span>
+          <span data-i18n-en>The Municipal Auditorium of Teror, the festival's main venue, is a 25-minute drive from the center of Las Palmas de Gran Canaria. A perfect chance to discover the old town and the Basilica of El Pino after the shows.</span>
+          <span data-i18n-de>Das städtische Auditorium von Teror, der Hauptveranstaltungsort des Festivals, liegt 25 Autominuten vom Zentrum von Las Palmas de Gran Canaria entfernt. Eine perfekte Gelegenheit, nach den Vorstellungen die Altstadt und die Basilika El Pino zu entdecken.</span>
+        </p>
+        <ul>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Auditorio de Teror</strong><br>
+              <span data-i18n-es>Plaza Pino — 35330 Teror — Gran Canaria</span>
+              <span data-i18n-en>Plaza Pino — 35330 Teror — Gran Canaria</span>
+              <span data-i18n-de>Plaza Pino — 35330 Teror — Gran Canaria</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-car"></i>
+            <div data-i18n-es>En coche: 25 min desde Las Palmas (GC-21). Aparcamiento en el centro de la Villa.</div>
+            <div data-i18n-en>By car: 25 min from Las Palmas (GC-21). Parking in the center of the village.</div>
+            <div data-i18n-de>Mit dem Auto: 25 Min. von Las Palmas (GC-21). Parkplätze im Ortskern.</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-bus"></i>
+            <div data-i18n-es>En guagua: líneas Global 220 y 226 desde San Telmo (Las Palmas).</div>
+            <div data-i18n-en>By bus: Global lines 220 and 226 from San Telmo (Las Palmas).</div>
+            <div data-i18n-de>Mit dem Bus: Linien Global 220 und 226 ab San Telmo (Las Palmas).</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-plane-arrival"></i>
+            <div data-i18n-es>Desde el aeropuerto LPA: 45 min en coche por la GC-1 / GC-3 / GC-21.</div>
+            <div data-i18n-en>From LPA airport: 45 min by car via GC-1 / GC-3 / GC-21.</div>
+            <div data-i18n-de>Vom Flughafen LPA: 45 Min. mit dem Auto über GC-1 / GC-3 / GC-21.</div>
+          </li>
+        </ul>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-15.5520%2C28.0530%2C-15.5400%2C28.0640&amp;layer=mapnik&amp;marker=28.0586%2C-15.5460"
+          title="Teror map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PATROCINADORES ============== -->
+<section id="patrocinadores">
+  <div class="container">
+    <div class="section-label reveal" style="justify-content:center">
+      <span data-i18n-es>Organizan y colaboran</span>
+      <span data-i18n-en>Organizers & collaborators</span>
+      <span data-i18n-de>Veranstalter & Partner</span>
+    </div>
+    <h2 class="section-title reveal" style="margin-bottom:0.5rem">
+      <span data-i18n-es>Una magia que <em>se hace en equipo</em>.</span>
+      <span data-i18n-en>Magic that is <em>made as a team</em>.</span>
+      <span data-i18n-de>Magie, die <em>gemeinsam entsteht</em>.</span>
+    </h2>
+
+    <div class="sponsors-block promotor reveal">
+      <h4>
+        <span data-i18n-es>Promueve</span>
+        <span data-i18n-en>Promoted by</span>
+        <span data-i18n-de>Veranstalter</span>
+      </h4>
+      <div class="sponsors-grid">
+        <a href="https://teror.es" target="_blank" rel="noopener" class="sponsor-logo">
+          <img src="img/logos/ayuntamiento-teror.svg" alt="Ayuntamiento de Teror">
+        </a>
+      </div>
+    </div>
+
+    <div class="sponsors-block reveal">
+      <h4>
+        <span data-i18n-es>Colaboran</span>
+        <span data-i18n-en>In collaboration with</span>
+        <span data-i18n-de>In Zusammenarbeit mit</span>
+      </h4>
+      <div class="sponsors-grid">
+        <a href="https://www.grancanaria.com" target="_blank" rel="noopener" class="sponsor-logo">
+          <img src="img/logos/cabildo-gran-canaria.svg" alt="Cabildo de Gran Canaria">
+        </a>
+        <a href="https://www.holaislascanarias.com" target="_blank" rel="noopener" class="sponsor-logo">
+          <img src="img/logos/islas-canarias.svg" alt="Islas Canarias · Latitud de Vida">
+        </a>
+        <a href="https://auditorio.teror.es" target="_blank" rel="noopener" class="sponsor-logo">
+          <img src="img/logos/auditorio-teror.svg" alt="Auditorio de Teror">
+        </a>
+        <a href="https://www.aguasdeteror.com" target="_blank" rel="noopener" class="sponsor-logo">
+          <img src="img/logos/aguas-de-teror.svg" alt="Aguas de Teror">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CONTACTO ============== -->
+<section id="contacto">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label reveal">
+          <span data-i18n-es>Contacto</span>
+          <span data-i18n-en>Contact</span>
+          <span data-i18n-de>Kontakt</span>
+        </div>
+        <h2 class="section-title reveal" style="margin-bottom:1.5rem">
+          <span data-i18n-es>Hablemos.</span>
+          <span data-i18n-en>Let's talk.</span>
+          <span data-i18n-de>Sprechen wir.</span>
+        </h2>
+        <p class="reveal">
+          <span data-i18n-es>¿Eres prensa, artista o quieres colaborar con el festival? Escríbenos y te respondemos cuanto antes.</span>
+          <span data-i18n-en>Press, artist, or interested in collaborating with the festival? Write to us and we'll reply as soon as possible.</span>
+          <span data-i18n-de>Presse, Künstler oder Kooperationspartner? Schreiben Sie uns und wir antworten so schnell wie möglich.</span>
+        </p>
+        <ul class="contact-list reveal">
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span class="label" data-i18n-es>Email</span>
+              <span class="label" data-i18n-en>Email</span>
+              <span class="label" data-i18n-de>E-Mail</span>
+              <a href="mailto:auditorio@teror.es">auditorio@teror.es</a>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <span class="label" data-i18n-es>Teléfono</span>
+              <span class="label" data-i18n-en>Phone</span>
+              <span class="label" data-i18n-de>Telefon</span>
+              <a href="tel:+34928630075">+34 928 63 00 75</a>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <span class="label" data-i18n-es>Taquilla</span>
+              <span class="label" data-i18n-en>Box office</span>
+              <span class="label" data-i18n-de>Kasse</span>
+              <span data-i18n-es>Una hora antes de cada espectáculo</span>
+              <span data-i18n-en>One hour before each show</span>
+              <span data-i18n-de>Eine Stunde vor jeder Vorstellung</span>
+            </div>
+          </li>
+        </ul>
+        <div class="socials reveal">
+          <a href="https://www.instagram.com/auditorioteror" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/auditoriodeteror" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://teror.es" target="_blank" rel="noopener" aria-label="Web"><i class="fa-solid fa-globe"></i></a>
+        </div>
+      </div>
+
+      <div class="newsletter reveal">
+        <h3>
+          <span data-i18n-es>Recibe la magia en tu correo</span>
+          <span data-i18n-en>Get magic in your inbox</span>
+          <span data-i18n-de>Magie in deinem Postfach</span>
+        </h3>
+        <p>
+          <span data-i18n-es>Sé el primero en conocer el cartel, las novedades y la venta de entradas de la X edición.</span>
+          <span data-i18n-en>Be the first to know the lineup, news and ticket release for the 10<sup>th</sup> edition.</span>
+          <span data-i18n-de>Erfahre als Erster das Programm, Neuigkeiten und den Ticketverkauf der 10. Ausgabe.</span>
+        </p>
+        <form onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ '+this.querySelector('button').dataset.thanks">
+          <input type="email" required placeholder="tu@email.com" aria-label="Email">
+          <button type="submit"
+            data-thanks="Gracias">
+            <span data-i18n-es>Suscribirme</span>
+            <span data-i18n-en>Subscribe</span>
+            <span data-i18n-de>Abonnieren</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">TEROR · ES · MAGIA</div>
+    <div class="footer-meta">
+      © 2026 ·
+      <span data-i18n-es>Festival Teror es Magia · Ayuntamiento de Teror ·</span>
+      <span data-i18n-en>Teror es Magia Festival · Teror Town Hall ·</span>
+      <span data-i18n-de>Festival Teror es Magia · Stadtverwaltung Teror ·</span>
+      <a href="https://teror.es">teror.es>teror.es</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  try{
+    const loader=document.getElementById('loader');
+    if(loader){
+      window.addEventListener('load',()=>setTimeout(()=>loader.classList.add('hidden'),2400));
+      setTimeout(()=>loader && loader.classList.add('hidden'),3500);
+    }
+  }catch(e){console.warn(e)}
+  try{
+    const nav=document.getElementById('nav');
+    if(nav){
+      const onScroll=()=>{
+        if(window.scrollY>40)nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      };
+      window.addEventListener('scroll',onScroll,{passive:true});
+      onScroll();
+    }
+  }catch(e){console.warn(e)}
+  try{
+    const hb=document.getElementById('hamburger');
+    const nl=document.getElementById('navLinks');
+    if(hb&&nl){
+      hb.addEventListener('click',()=>{
+        hb.classList.toggle('open');
+        nl.classList.toggle('open');
+      });
+      nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+        hb.classList.remove('open');nl.classList.remove('open');
+      }));
+    }
+  }catch(e){console.warn(e)}
+  try{
+    const obs=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    },{threshold:0.12,rootMargin:'0px 0px -60px 0px'});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  }catch(e){
+    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+  }
+  try{
+    const body=document.body;
+    const btns=document.querySelectorAll('[data-lang-btn]');
+    const setLang=(lang)=>{
+      body.setAttribute('data-lang',lang);
+      document.documentElement.setAttribute('lang',lang);
+      btns.forEach(b=>{b.classList.toggle('active',b.dataset.langBtn===lang)});
+      try{localStorage.setItem('teror-lang',lang)}catch(e){}
+      const sub=document.querySelector('.newsletter button');
+      if(sub){
+        const map={es:'Gracias',en:'Thank you',de:'Danke'};
+        sub.dataset.thanks=map[lang]||'Gracias';
+      }
+    };
+    btns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.langBtn)));
+    let saved=null;
+    try{saved=localStorage.getItem('teror-lang')}catch(e){}
+    if(saved && ['es','en','de'].includes(saved)){
+      setLang(saved);
+    } else {
+      const navLang=(navigator.language||'es').slice(0,2).toLowerCase();
+      if(['en','de'].includes(navLang))setLang(navLang);
+    }
+  }catch(e){console.warn(e)}
+})();
+</script>
+</body>
+</html>
