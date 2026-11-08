@@ -1,0 +1,86 @@
+/* ---- Teror es Magia: negro de telón, oro y rojo de naipe ---- */
+@font-face{font-family:"Fraunces";font-weight:700;font-display:swap;src:url(/fonts/fraunces-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Fraunces";font-weight:900;font-display:swap;src:url(/fonts/fraunces-latin-900-normal.woff2) format("woff2")}
+@font-face{font-family:"Fraunces";font-weight:700;font-style:italic;font-display:swap;src:url(/fonts/fraunces-latin-700-italic.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:400;font-display:swap;src:url(/fonts/inter-tight-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:600;font-display:swap;src:url(/fonts/inter-tight-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:700;font-display:swap;src:url(/fonts/inter-tight-latin-700-normal.woff2) format("woff2")}
+:root{
+  --negro:#0d0a12;--negro-2:#17121f;--negro-3:#221a2d;--oro:#e2b55a;--oro-claro:#f3d58f;--rojo:#d7363c;--crema:#f6efe2;--suave:#c7bdb0;
+  --fondo:var(--negro);--tinta:var(--crema);--enlace:var(--oro-claro);--foco:var(--oro);--linea:#3a2f45;
+  --letra:"Inter Tight",system-ui,sans-serif;--letra-titulo:"Fraunces",Georgia,serif;
+  --nav-fondo:rgba(13,10,18,.86);--menu-activo:var(--negro-3);--pie-fondo:#08060b;--pie-tinta:var(--suave)
+}
+h1,h2,h3{font-weight:900;letter-spacing:-.015em}
+h3{font-weight:700}
+.antetitulo{color:var(--oro)}
+.logo{font-family:var(--letra-titulo);font-size:1.3rem;color:var(--crema)}
+.logo b{font-weight:900}
+.logo i{font-style:italic;font-weight:700;color:var(--oro)}
+.boton-oro{background:linear-gradient(135deg,var(--oro-claro),var(--oro));color:var(--negro)}
+.boton-oro:hover{filter:brightness(1.06)}
+.cabecera-seccion{max-width:760px;margin-bottom:2.4rem}
+.cabecera-seccion h2,.festival-grid h2,.contacto h2{font-size:clamp(1.9rem,4vw,2.9rem)}
+.seccion-alta{background:var(--negro-2)}
+
+/* Portada */
+.portada{position:relative;overflow:hidden;min-height:min(92vh,820px);display:flex;align-items:flex-end;padding:clamp(4rem,10vw,7rem) 0 clamp(3rem,7vw,5rem);background:radial-gradient(ellipse at 50% 0%,#3b1f3f 0%,transparent 60%),radial-gradient(ellipse at 100% 100%,#3a0f16 0%,transparent 55%),var(--negro)}
+.portada .portada-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
+.portada::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,10,18,.25) 0%,rgba(13,10,18,.55) 45%,var(--negro) 100%);pointer-events:none}
+.estrellas{position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 12% 22%,#f3d58f 50%,transparent 51%),radial-gradient(1px 1px at 28% 68%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 64% 18%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 82% 42%,#f3d58f 50%,transparent 51%),radial-gradient(2px 2px at 92% 12%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 46% 36%,#f3d58f 50%,transparent 51%);opacity:.7;z-index:1}
+.portada-txt{position:relative;z-index:2}
+.portada h1{margin:0 0 1.2rem;line-height:.88}
+.portada .t1{display:block;font-size:clamp(4.4rem,15vw,11rem);font-weight:900}
+.portada .t2{display:block;font-size:clamp(2.6rem,8vw,5.6rem);font-style:italic;font-weight:700;color:var(--oro);margin-top:.3rem}
+.portada .entradilla{color:#e6ddcf;margin-bottom:2rem}
+.proxima{display:inline-block;max-width:520px;background:rgba(23,18,31,.78);backdrop-filter:blur(8px);border:1px solid rgba(226,181,90,.45);border-radius:20px;padding:1.3rem 1.5rem}
+.proxima p{margin:0 0 .6rem;color:var(--suave)}
+.proxima .proxima-etiqueta{font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--oro);margin-bottom:.3rem}
+.proxima .proxima-fechas{font-family:var(--letra-titulo);font-size:1.7rem;font-weight:900;color:var(--crema)}
+.proxima .boton{margin-top:.6rem}
+
+/* El festival */
+.festival-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:3rem;align-items:start}
+.festival-grid p{color:var(--suave)}
+.festival-grid .entradilla{color:var(--crema)}
+.datos{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+.datos li{border-top:3px solid var(--oro);padding-top:.8rem}
+.datos strong{display:block;font-family:var(--letra-titulo);font-size:1.15rem}
+.datos span{color:var(--suave);font-size:.95rem}
+@media (max-width:860px){.festival-grid{grid-template-columns:1fr;gap:1rem}.datos{grid-template-columns:1fr}}
+
+/* Ediciones */
+.ediciones{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:1.3rem}
+.edicion{display:grid;grid-template-columns:120px 1fr;gap:1.1rem;align-items:start;background:var(--negro);border:1px solid var(--linea);border-radius:20px;padding:1.1rem}
+.cartel{width:120px;aspect-ratio:4/5;object-fit:cover;border-radius:10px;box-shadow:0 14px 30px -18px #000}
+.cartel-vacio{display:grid;place-items:center;background:linear-gradient(150deg,var(--negro-3),#3a0f16);border:1px solid var(--linea)}
+.cartel-vacio span{font-family:var(--letra-titulo);font-weight:900;font-size:2.4rem;color:var(--oro)}
+.edicion-n{margin:0 0 .3rem;font-weight:700;color:var(--oro);font-size:.92rem}
+.edicion h3{font-size:1.2rem;margin-bottom:.4rem}
+.edicion-artistas{color:var(--crema);font-weight:600}
+.edicion-txt p{margin:0 0 .5rem;color:var(--suave)}
+.edicion-txt .edicion-artistas{color:var(--crema)}
+@media (max-width:420px){.edicion{grid-template-columns:90px 1fr}.cartel{width:90px}}
+
+/* Magos */
+.magos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(45%,200px),1fr));gap:1rem}
+.mago{margin:0}
+.mago-foto{width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;filter:saturate(.9)}
+.mago p{margin:.6rem 0 0;font-weight:700}
+
+/* Contacto */
+.contacto{padding-top:0}
+.contacto-caja{display:grid;grid-template-columns:1.3fr auto;gap:2rem;align-items:center;background:linear-gradient(135deg,var(--negro-3),#2b0e14);border:1px solid var(--linea);border-radius:28px;padding:clamp(2rem,5vw,3.5rem)}
+.contacto-caja p{color:var(--suave);max-width:56ch}
+.contacto-caja .boton{word-break:break-all}
+@media (max-width:820px){.contacto-caja{grid-template-columns:1fr}}
+
+/* Pie */
+.pie{border-top:1px solid var(--linea)}
+.pie-arriba{display:grid;grid-template-columns:1fr 1.2fr;gap:2rem;align-items:center}
+.pie-logo{font-family:var(--letra-titulo);font-size:1.7rem;color:var(--crema);margin-bottom:.3rem}
+.pie-logo b{font-weight:900}.pie-logo i{color:var(--oro);font-weight:700}
+.pie-logos{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:flex-end}
+.pie-logos img{height:56px;width:auto;background:#fff;border-radius:10px;padding:6px 10px}
+@media (max-width:700px){.pie-arriba{grid-template-columns:1fr}.pie-logos{justify-content:flex-start}}
+.legal,.error{color:var(--tinta)}
