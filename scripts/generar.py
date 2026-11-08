@@ -17,8 +17,8 @@ CORREO = "info@teroresmagia.es"
 S = Sitio(
     nombre="Teror es Magia", nombre_corto="Teror es Magia",
     dominio="https://teroresmagia.es",
-    titular="Grupo Livon SL", nif="B75793356",
-    domicilio="Hoya de Parrado, 4 · 35017 Las Palmas de Gran Canaria",
+    titular="Ayuntamiento de la Villa de Teror", nif="P3502700B",
+    domicilio="Calle Muro Nuevo, 2 · 35330 Teror (Las Palmas)",
     correo=CORREO, correo_datos=CORREO,
     objeto="Esta web informa sobre el festival Teror es Magia, sus ediciones y la forma de contactar.",
     color_tema="#0d0a12", color_fondo="#0d0a12",
